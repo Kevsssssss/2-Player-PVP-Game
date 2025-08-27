@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2-Player PVP Arcade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="menuOverlay" class="overlay">
+        <h1>2-Player PVP Arcade</h1>
+        <button id="startBtn" class="button">Start Game</button>
+    </div>
+
+    <div id="lobbyOverlay" class="overlay">
+        <h1>Prepare</h1>
+        <div class="player-status">
+            <div class="p1-status">
+                <p>Player 1 (Red)</p>
+                <div id="p1ReadyDot" class="dot"></div>
+                <p class="controls">Move: Mouse</p>
+            </div>
+            <div class="p2-status">
+                <p>Player 2 (Blue)</p>
+                <div id="p2ReadyDot" class="dot"></div>
+                <p class="controls">Move: WASD</p>
+            </div>
+        </div>
+        <p style="margin-top: 20px;">
+            Player 1, move your mouse to ready up. <br> Player 2, press WASD to ready up.
+        </p>
+    </div>
+
+    <div id="countdownOverlay" class="overlay">
+        <p id="countdownText"></p>
+    </div>
+
+    <div id="gameOverOverlay" class="overlay">
+        <h1 id="winnerText">Player X Wins!</h1>
+        <button id="restartBtn" class="button">Restart</button>
+    </div>
+
+    <div class="game-container">
+        <div id="gameUI">
+            <div id="p1Hearts" class="health-bar">
+                <p class="player-label" style="color: crimson;">P1</p>
+            </div>
+            <div id="p2Hearts" class="health-bar">
+                <p class="player-label" style="color: dodgerblue;">P2</p>
+            </div>
+        </div>
+
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
